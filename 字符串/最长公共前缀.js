@@ -20,3 +20,14 @@ i
 返回值：
 "abc"
  */
+
+function longestCommonPrefix(strs) {
+    if(arr.length == 0) return '';
+    let str = strs[0];
+    for(let i = 0; i < str.length; i++) {
+        for(let j = 0; j < strs.length; j++) {
+            if(str[j][i] !== str[i]) return str.slice(0, i);
+        }
+    }
+    return str
+}
